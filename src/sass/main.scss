@@ -127,8 +127,64 @@ body {
 					}
 				}
 			}
-			
-	}}
+			.menu-box {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				width: 100%;
+				transform: translateX(1800px);
+				background-color: #fff;
+				transition: transform 0.4s;
+
+				.menu {
+					display: flex;
+					align-items: center;
+					background: none;
+					border: 1px solid transparent;
+					background-color: #f9f9f9;
+					box-shadow: inset 0 4px 5px -3px rgb(0 0 0 / 20%);
+
+					span {
+						width: 100%;
+						text-align: center;
+						font-weight: 400;
+					}
+
+					svg {
+						transform: translateX(-7px);
+					}
+				}
+
+				.link {
+					padding: 16px 32px;
+					font-size: 1.9rem;
+					text-decoration: none;
+					color: #000000de;
+					font-weight: 600;
+					text-align: left;
+				}
+			}
+			.active-second-menu {
+				transform: translateX(0);
+			}
+		}
+		.active-first-menu {
+			transform: translateX(0);
+		}
+
+		.shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.16);
+			opacity: 0;
+			transition: opacity 0.4s;
+		}
+		.active-shadow {
+			opacity: 1;
+		}
+	}
 }
 
 // DESKTOP================NAV
