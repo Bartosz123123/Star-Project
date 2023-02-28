@@ -1,0 +1,38 @@
+@media (min-width: 1024px) {
+	.nav-desktop {
+		.nav-box {
+			height: 101px;
+
+			.left-box {
+				// .logo {
+				// 	margin-right: 4em;
+				// }
+				.links {
+					.link {
+						padding: 40px 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1520px) {
+	.nav-desktop {
+		.desktop-rewards {
+			.box {
+				padding-left: 4em;
+			}
+		}
+	}
+}
+@media (min-width: 1670px) {
+	.nav-desktop {
+		.nav-box {
+			.logo {
+				width: 5.1em;
+				margin: 0 4em 0 -9em;
+			}
+		}
+	}
+}

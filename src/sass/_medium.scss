@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+	.nav-mobile {
+		.nav-container {
+			.nav-bar {
+				padding: 0 2.4em;
+				height: 83px;
+				.logo-star {
+					width: 5.1em;
+				}
+			}
+		}
+	}
+
+	.right-nav {
+		height: calc(100vh - 83px);
+	}
+}
+
+@media (min-width: 800px) {
+	.nav-mobile {
+		display: none;
+	}
+	.nav-desktop {
+		display: block;
+	}
+} ;
