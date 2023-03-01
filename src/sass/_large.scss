@@ -16,6 +16,16 @@
 			}
 		}
 	}
+	.main {
+		.desktop-main {
+			.desktop-box {
+				.center-box {
+					padding: 3.2em 4em;
+					max-width: 450px;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1520px) {
@@ -36,8 +46,22 @@
 				width: 100%;
 			}
 		}
+
+		.desktop-main {
+			.desktop-box {
+				margin: auto;
+				max-width: 1440px;
+				.center-box {
+					padding: 0;
+				}
+			}
+		}
 	}
+
+	// max-width: 1440px;
+	// margin: auto;
 }
+
 @media (min-width: 1670px) {
 	.nav-desktop {
 		.nav-box {
