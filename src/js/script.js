@@ -5,6 +5,7 @@ const shadow = document.querySelector('.shadow');
 const body = document.querySelector('.body');
 const menuBtn = document.querySelector('.menu');
 const backMenuBtn = document.querySelector('.menu-back');
+const rightNav = document.querySelector('.right-nav');
 
 const activeMenu = () => {
 	burgerBtn.classList.toggle('is-active');
@@ -12,6 +13,7 @@ const activeMenu = () => {
 	body.classList.toggle('body-active');
 	menu1.classList.toggle('active-first-menu');
 	menu2.classList.remove('active-second-menu');
+	rightNav.classList.toggle('active-right-nav');
 };
 
 const active2Menu = () => {
@@ -28,6 +30,7 @@ const closeMenu = () => {
 	body.classList.remove('body-active');
 	menu1.classList.remove('active-first-menu');
 	menu2.classList.remove('active-second-menu');
+	rightNav.classList.remove('active-right-nav');
 };
 
 burgerBtn.addEventListener('click', activeMenu);

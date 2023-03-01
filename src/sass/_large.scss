@@ -2,14 +2,15 @@
 	.nav-desktop {
 		.nav-box {
 			height: 101px;
-
-			.left-box {
-				// .logo {
-				// 	margin-right: 4em;
-				// }
-				.links {
-					.link {
-						padding: 40px 0;
+			.center-box {
+				.left-box {
+					// .logo {
+					// 	margin-right: 4em;
+					// }
+					.links {
+						.link {
+							padding: 40px 0;
+						}
 					}
 				}
 			}
@@ -22,6 +23,17 @@
 		.desktop-rewards {
 			.box {
 				padding-left: 4em;
+			}
+		}
+	}
+
+	.main {
+		.rewards {
+			padding: 0;
+			.box {
+				margin: 0 auto;
+				max-width: 1440px;
+				width: 100%;
 			}
 		}
 	}

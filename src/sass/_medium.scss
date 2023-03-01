@@ -3,16 +3,24 @@
 		.nav-container {
 			.nav-bar {
 				padding: 0 2.4em;
-				height: 83px;
+				height: 84px;
 				.logo-star {
 					width: 5.1em;
 				}
 			}
 		}
+		.right-nav {
+			height: calc(100vh - 84px);
+		}
 	}
 
-	.right-nav {
-		height: calc(100vh - 83px);
+	.main {
+		.rewards {
+			padding: 0 2.4em 0 9.9em;
+			.button-box {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -22,5 +30,11 @@
 	}
 	.nav-desktop {
 		display: block;
+	}
+
+	.main {
+		.rewards {
+			padding: 0 4em 0 13.1em;
+		}
 	}
 } ;
