@@ -323,6 +323,7 @@ body {
 			.title {
 				font-size: 1.5rem;
 				letter-spacing: 0.1em;
+				line-height: 1.3em;
 				color: #fff;
 				text-transform: uppercase;
 			}
@@ -358,6 +359,7 @@ body {
 			.title-box {
 				.title {
 					font-size: 2.2rem;
+					line-height: 1.3em;
 					text-transform: uppercase;
 				}
 			}
@@ -525,6 +527,42 @@ body {
 
 	.favorites {
 		padding-top: 4.8em;
+
+		.top-container {
+			padding-top: 4.8em;
+			background-color: #f1f8f6;
+
+			.top-favorites {
+				padding: 0 1.6em;
+				.title-top {
+					padding-bottom: 1.6em;
+					text-align: center;
+					.title {
+						font-size: 2rem;
+					}
+				}
+			}
+
+			.choose-box {
+				// display: flex;
+				.btn {
+					padding: 8px 8px 16px;
+					font-size: 1.9rem;
+					background: none;
+					border: 1px solid transparent;
+					font-weight: bold;
+
+					.star {
+						color: #cba258;
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+		.bottom-container {
+			background-color: #d4e9e2;
+		}
 	}
 }
 
