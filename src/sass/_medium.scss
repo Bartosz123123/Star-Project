@@ -28,6 +28,61 @@
 
 		.desktop-main {
 			display: block;
+			margin-bottom: 12.8em;
+		}
+
+		.instruction {
+			.container {
+				.center-box {
+					padding: 0 4em;
+
+					.title-box {
+						.title {
+							font-size: 2.8rem;
+						}
+					}
+
+					.instruction-container {
+						display: flex;
+						align-items: flex-start;
+						justify-content: center;
+
+						.boxes {
+							flex-direction: column;
+							text-align: center;
+							width: 26.455%;
+							padding-bottom: 0;
+
+							.img-box {
+								padding-bottom: 2.4em;
+								img {
+									width: 4.8em;
+								}
+							}
+
+							.instruction-box {
+								.title {
+									font-size: 1.9rem;
+								}
+
+								.text {
+									font-size: 1.6rem;
+								}
+							}
+						}
+
+						.number-one-box {
+							margin: 0 24px 0 0;
+						}
+						.number-two-box {
+							margin: 0 24px;
+						}
+						.number-three-box {
+							margin: 0 0 0 24px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
