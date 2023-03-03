@@ -544,43 +544,67 @@ body {
 			}
 
 			.choose-box {
+				position: relative;
 				display: flex;
 				align-items: center;
 
-				.boxes {
+				// .boxes-value {
+				// 	position: relative;
+				// 	width: 100%;
+				// 	text-align: center;
+				.btn {
 					position: relative;
+					padding: 8px 8px 16px;
 					width: 100%;
-					text-align: center;
-					.btn {
-						padding: 8px 8px 16px;
-						width: 100%;
-						font-size: 1.9rem;
-						background: none;
-						border: 1px solid transparent;
-						font-weight: bold;
+					font-size: 1.9rem;
+					background: none;
+					border: 1px solid transparent;
+					font-weight: bold;
+					cursor: pointer;
 
-						.star {
-							color: #cba258;
-							font-size: 1.5rem;
-						}
-					}
-
-					.slider-class {
-						position: absolute;
-						left: 0;
-						bottom: 0;
-						height: 4px;
-						width: 100%;
-						background-color: #00754a;
+					.star {
+						color: #cba258;
+						font-size: 1.5rem;
 					}
 				}
+
+				.marker {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 20%;
+					height: 4px;
+					background-color: #00754a;
+					transition: 0.5s;
+				}
+
+				.slider-class {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 4px;
+					width: 100%;
+					background-color: #00754a;
+				}
+				// }
+
+				// .slider {
+				// 	position: absolute;
+				// 	left: 0;
+				// 	bottom: 0;
+				// 	height: 4px;
+				// 	background: #00754a;
+				// }
 			}
 		}
 
 		.bottom-container {
-			background-color: #d4e9e2;
 			padding-bottom: 4.8em;
-			.boxes {
+			box-shadow: inset 0 7px 9px -7px rgb(0 0 0 / 14%);
+			background-color: #d4e9e2;
+			.boxes-img {
+				display: none;
+				transition: opacity 0.3s;
 				.img-box {
 					padding: 3.2em 0;
 					.img {
@@ -604,9 +628,19 @@ body {
 			}
 
 			.active-img {
-				display: flex;
+				display: block;
+				animation: fadeEffect 0.4s;
 			}
 		}
+	}
+}
+
+@keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 
