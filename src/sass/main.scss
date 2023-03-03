@@ -544,17 +544,34 @@ body {
 			}
 
 			.choose-box {
-				// display: flex;
-				.btn {
-					padding: 8px 8px 16px;
-					font-size: 1.9rem;
-					background: none;
-					border: 1px solid transparent;
-					font-weight: bold;
+				display: flex;
+				align-items: center;
 
-					.star {
-						color: #cba258;
-						font-size: 1.5rem;
+				.boxes {
+					position: relative;
+					width: 100%;
+					text-align: center;
+					.btn {
+						padding: 8px 8px 16px;
+						width: 100%;
+						font-size: 1.9rem;
+						background: none;
+						border: 1px solid transparent;
+						font-weight: bold;
+
+						.star {
+							color: #cba258;
+							font-size: 1.5rem;
+						}
+					}
+
+					.slider-class {
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						height: 4px;
+						width: 100%;
+						background-color: #00754a;
 					}
 				}
 			}
@@ -562,6 +579,33 @@ body {
 
 		.bottom-container {
 			background-color: #d4e9e2;
+			padding-bottom: 4.8em;
+			.boxes {
+				.img-box {
+					padding: 3.2em 0;
+					.img {
+						width: 100%;
+					}
+				}
+
+				.title-bottom {
+					padding: 0 1.6em;
+					text-align: center;
+
+					.title {
+						padding-bottom: 16px;
+						font-size: 1.9rem;
+					}
+
+					.text {
+						font-size: 1.4rem;
+					}
+				}
+			}
+
+			.active-img {
+				display: flex;
+			}
 		}
 	}
 }

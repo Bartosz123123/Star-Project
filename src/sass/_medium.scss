@@ -84,6 +84,71 @@
 				}
 			}
 		}
+
+		.favorites {
+			.top-container {
+				.top-favorites {
+					.title-top {
+						padding-bottom: 4.8em;
+						.title {
+							font-size: 2.8rem;
+						}
+					}
+				}
+				.choose-box {
+					margin: 0 auto;
+					max-width: 540px;
+
+					.boxes {
+						.btn {
+							font-size: 2.4rem;
+
+							.star {
+								font-size: 1.7rem;
+							}
+						}
+					}
+				}
+			}
+
+			.bottom-container {
+				padding: 0;
+				.boxes {
+					// display: flex;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					padding: 3.2em 00;
+					.img-box {
+						padding: 0;
+						width: 100%;
+						max-width: 375px;
+						.img {
+							max-width: 345px;
+						}
+					}
+
+					.title-bottom {
+						text-align: left;
+						max-width: 375px;
+						.title {
+							font-size: 2.4rem;
+						}
+
+						.text {
+							font-size: 1.6rem;
+						}
+					}
+				}
+
+				.active-img {
+					display: flex;
+				}
+				// .first-img{
+				// 	display: flex;
+				// }
+			}
+		}
 	}
 }
 
