@@ -86,6 +86,7 @@
 		}
 
 		.favorites {
+			padding-bottom: 128px;
 			.top-container {
 				.top-favorites {
 					.title-top {
@@ -147,6 +148,23 @@
 				// .first-img{
 				// 	display: flex;
 				// }
+			}
+		}
+
+		.endless-section {
+			.container {
+				.center-box {
+					.instruction-container {
+						.boxes {
+							.img-box {
+								padding-right: 0;
+								img {
+									width: 112px;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
