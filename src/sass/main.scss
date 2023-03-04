@@ -633,7 +633,7 @@ body {
 			}
 		}
 	}
-
+	//============================ENDLESS-SECTION=====================================
 	.endless-section {
 		.container {
 			.center-box {
@@ -670,6 +670,83 @@ body {
 								border-bottom: 1px solid #006241;
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	.cash-section {
+		.container {
+			background-color: #f2f0eb;
+			.center-box {
+				margin: auto;
+				padding: 4.8em 1.6em;
+				max-width: 1440px;
+				.info-box {
+					margin-bottom: 16px;
+					padding-bottom: 48px;
+					text-align: center;
+
+					.title-box {
+						.title {
+							padding: 24px 0 16px;
+							font-size: 2rem;
+						}
+					}
+
+					.text-box {
+						.text {
+							font-size: 1.4rem;
+						}
+					}
+				}
+
+				.box {
+					.box-title {
+						padding-bottom: 32px;
+						.title {
+							font-size: 1.9rem;
+						}
+
+						.text {
+							font-size: 1.4rem;
+						}
+					}
+
+					.second-title {
+						display: none;
+					}
+					.double-box {
+						.boxes {
+							display: flex;
+							padding-bottom: 32px;
+							.img-box {
+								padding-right: 16px;
+								img {
+									width: 112px;
+								}
+							}
+							.info {
+								.info-title {
+									font-size: 1.6rem;
+								}
+
+								.info-text {
+									padding-top: 16px;
+									font-size: 1.4rem;
+								}
+							}
+						}
+					}
+
+					.double-box-desktop {
+						display: none;
+					}
+					.line {
+						margin: 16px 0 40px;
+						height: 1px;
+						width: 100%;
+						background-color: rgba(0, 0, 0, 0.1);
 					}
 				}
 			}

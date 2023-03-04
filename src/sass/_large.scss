@@ -43,6 +43,54 @@
 				}
 			}
 		}
+
+		.cash-section {
+			.container {
+				.center-box {
+					padding: 4.8em 4em;
+
+					.info-box {
+						width: 50%;
+					}
+					.box {
+						.box-title {
+							display: none;
+						}
+						.double-box-desktop {
+							.second-title {
+								display: block;
+								width: 16.66667%;
+							}
+
+							.boxes {
+								padding: 0 24px;
+								width: 41.66667%;
+							}
+						}
+					}
+				}
+			}
+		}
+		// 16.66667%
+		// 41.66667%
+	}
+}
+
+@media (min-width: 1280px) {
+	.main {
+		.cash-section {
+			.container {
+				.center-box {
+					.box {
+						.double-box-desktop {
+							.boxes {
+								width: 33.33333%;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
