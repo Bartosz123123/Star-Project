@@ -33,6 +33,102 @@ const slider5 = document.querySelector('.slider-five');
 const item = document.querySelectorAll('.item');
 const marker = document.querySelector('.marker');
 
+const formBox = document.querySelector('form-box');
+const input = document.getElementById('input');
+const inputBox = document.querySelector('.input-box');
+const pseudoPlaceholder = document.querySelector('.pseudo-placeholder');
+const errorBox = document.querySelector('.error-box');
+const form = document.querySelector('.form-box');
+const errorX = document.querySelector('.error-x');
+
+// const activePlaceholder = (e) => {
+// 	if (e.target == inputBox || e.target == input) {
+// 		pseudoPlaceholder.classList.add('active-placeholder');
+// 		inputBox.classList.add('input-box-active');
+// 	} else if (e.target !== inputBox || e.target !== input) {
+// 		pseudoPlaceholder.classList.remove('active-placeholder');
+// 		inputBox.classList.remove('input-box-active');
+// 		removeClass();
+// 	}
+// };
+
+// const removeClass = () => {
+// 	if () {
+// 		pseudoPlaceholder.classList.add('close-placeholder');
+// 		setTimeout(() => {
+// 			pseudoPlaceholder.classList.remove('close-placeholder');
+// 		}, 250);
+// 	}
+// };
+
+// const closePlaceholder = (e) => {
+// 	if (e.target !== inputBox || e.target !== input) {
+// 		pseudoPlaceholder.classList.remove('active-placeholder');
+// 		inputBox.classList.remove('input-box-active');
+// 	}
+// };
+
+// e.target !== inputBox || e.target !== input
+
+const activePlaceholder = (e) => {
+	if (e.target == inputBox || e.target == input) {
+		pseudoPlaceholder.classList.add('active-placeholder');
+		inputBox.classList.add('input-box-active');
+	} else if (input.value !== '') {
+		removeError();
+		return;
+	} else if (e.target !== inputBox || e.target !== input) {
+		if (pseudoPlaceholder.classList.contains('active-placeholder')) {
+			pseudoPlaceholder.classList.remove('active-placeholder');
+			inputBox.classList.remove('input-box-active');
+			errorBox.classList.add('show-error');
+			inputBox.classList.add('error-placeholder');
+			pseudoPlaceholder.classList.add('error-pseudo-placeholder');
+			pseudoPlaceholder.classList.add('close-placeholder');
+			errorX.classList.add('active-x');
+
+			setTimeout(() => {
+				pseudoPlaceholder.classList.remove('close-placeholder');
+			}, 250);
+		}
+	}
+	// console.log(errorBox.classList.contains('show-error'));
+};
+
+const removeError = () => {
+	if (input.value === '') {
+		errorBox.classList.add('show-error');
+		pseudoPlaceholder.classList.add('error-pseudo-placeholder');
+		errorBox.classList.remove('hide-error');
+		errorX.classList.add('active-x');
+	} else if (input.value !== '') {
+		errorBox.classList.remove('show-error');
+		inputBox.classList.remove('error-placeholder');
+		pseudoPlaceholder.classList.remove('error-pseudo-placeholder');
+		errorX.classList.remove('active-x');
+		errorBox.classList.add('hide-error');
+	}
+};
+
+// const removeError = () => {
+// 	if (input.value !== '') {
+// 		errorBox.classList.remove('show-error');
+// 		inputBox.classList.remove('error-placeholder');
+// 		pseudoPlaceholder.classList.remove('error-pseudo-placeholder');
+// 		errorX.classList.remove('active-x');
+// 		errorBox.classList.add('hide-error');
+// 		setInterval(() => {
+// 			errorBox.classList.remove('hide-error');
+// 		}, 250);
+// 		return;
+// 	} else {
+// 		errorBox.classList.add('show-error');
+// 		inputBox.classList.add('error-placeholder');
+// 		pseudoPlaceholder.classList.add('error-pseudo-placeholder');
+// 		errorX.classList.add('active-x');
+// 	}
+// };
+
 const activeMarker = (e) => {
 	marker.style.left = e.offsetLeft + 'px';
 	marker.style.width = e.offsetWidth + 'px';
@@ -109,6 +205,9 @@ item.forEach((link) => {
 		activeMarker(e.target.closest('button'));
 	});
 });
+
+input.addEventListener('keyup', removeError);
+window.addEventListener('click', activePlaceholder);
 fivethBtn.addEventListener('click', activeBorder5);
 fourthBtn.addEventListener('click', activeBorder4);
 thirdBtn.addEventListener('click', activeBorder3);

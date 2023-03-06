@@ -737,6 +737,9 @@ body {
 								}
 							}
 						}
+						.last-box {
+							padding-bottom: 0;
+						}
 					}
 
 					.double-box-desktop {
@@ -751,6 +754,205 @@ body {
 				}
 			}
 		}
+	}
+
+	.form-section {
+		.container {
+			.center-box {
+				padding: 0 1.6em;
+				.form-box {
+					.title-box {
+						.title {
+							padding-bottom: 16px;
+							font-size: 2rem;
+						}
+
+						.text {
+							font-size: 1.4rem;
+						}
+					}
+					.input-container {
+						margin: 0 -16px;
+						padding: 12px 16px;
+						.input-box {
+							position: relative;
+							padding: 12px 16px;
+							background-color: #fff;
+							box-shadow: 0 0 0 1px rgb(0 0 0 / 40%);
+							border-radius: 8px;
+
+							input {
+								width: 100%;
+								font-size: 1.6rem;
+								border: 1px solid transparent;
+							}
+
+							input:focus {
+								outline: none;
+							}
+
+							.pseudo-placeholder {
+								position: absolute;
+								left: 12px;
+								top: 50%;
+								transform: translateY(-50%);
+								padding: 0 4px;
+								font-size: 1.6rem;
+								// animation-duration: 0.25s;
+								// animation-fill-mode: forwards;
+								// animation-timing-function: ease-in-out;
+								background-color: #fff;
+								pointer-events: none;
+								transition: border 0.25s, color 0.25s;
+							}
+
+							.error-x {
+								display: none;
+								position: absolute;
+								right: 12px;
+								top: 50%;
+								width: 24px;
+								transform: translateY(-50%);
+
+								svg {
+									color: red;
+								}
+							}
+
+							.active-x {
+								display: block;
+							}
+
+							.active-placeholder {
+								animation: activeInput forwards;
+								animation-duration: 0.25s;
+								animation-timing-function: ease-in-out;
+							}
+
+							.close-placeholder {
+								animation: closeInput;
+								animation-duration: 0.25s;
+								animation-timing-function: ease-in-out;
+							}
+
+							.error-pseudo-placeholder {
+								color: red;
+							}
+						}
+						.error-placeholder {
+							border: 2px solid red;
+							box-shadow: none;
+						}
+
+						.input-box-active {
+							border: 2px solid #00754a;
+							box-shadow: none;
+						}
+
+						.error-box {
+							position: relative;
+							top: 1px;
+							display: flex;
+							align-items: center;
+							padding-top: 4px;
+							transform: translateY(-30px);
+							opacity: 0;
+							z-index: -2;
+
+							svg {
+								color: red;
+							}
+							.error {
+								// display: none;
+								font-size: 1.3rem;
+							}
+						}
+
+						.show-error {
+							animation: showError forwards;
+							animation-duration: 0.25s;
+							animation-timing-function: ease-in-out;
+						}
+
+						.hide-error {
+							animation: hideError;
+							animation-duration: 0.25s;
+							animation-timing-function: ease-in-out;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes hideError {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+		z-index: 0;
+	}
+
+	to {
+		transform: translateY(-30px);
+		opacity: 0;
+		z-index: -2;
+	}
+}
+@keyframes showError {
+	from {
+		transform: translateY(-30px);
+		opacity: 0;
+		z-index: -2;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+		z-index: 0;
+	}
+}
+
+@keyframes closeInput {
+	0% {
+		font-size: 1.3rem;
+		top: -12px;
+		transform: translateY(0);
+	}
+
+	50% {
+		font-size: 1.3rem;
+	}
+
+	to {
+		font-size: 1.6rem;
+		top: 50%;
+	}
+}
+
+@keyframes activeInput {
+	0% {
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0;
+	}
+
+	40% {
+		font-size: 1.6rem;
+		opacity: 1;
+		top: 50%;
+	}
+
+	50% {
+		font-size: 1.3rem;
+	}
+
+	100% {
+		font-size: 1.3rem;
+		top: -12px;
+		transform: translateY(0);
 	}
 }
 
