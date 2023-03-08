@@ -232,6 +232,7 @@
 					padding: 0 2.4em;
 					.form-box {
 						margin: 0 auto;
+						width: 50%;
 						// max-width: 360px;
 						.title-box {
 							.title {
@@ -245,6 +246,42 @@
 									font-size: 1.9rem;
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+
+		.earning-stars {
+			.container {
+				.center-box {
+					padding: 0 24px;
+					margin: 0 auto;
+					max-width: 1440px;
+					.box {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+
+						.boxes {
+							.title {
+								font-size: 1.6rem;
+							}
+
+							.text {
+								font-size: 1.4rem;
+							}
+
+							.link {
+								font-size: 1.4rem;
+							}
+						}
+
+						.terms {
+							padding: 0 0 32px 32px;
+						}
+
+						.redeeming {
+							padding: 0 0 32px 32px;
 						}
 					}
 				}

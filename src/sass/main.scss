@@ -758,6 +758,7 @@ body {
 	}
 
 	.form-section {
+		margin-bottom: 72px;
 		.container {
 			.center-box {
 				padding: 0 1.6em;
@@ -772,14 +773,11 @@ body {
 							font-size: 1.4rem;
 						}
 
-						.questions-title {
-						}
-
 						.questions-text {
 							font-size: 1.5rem;
 
 							a {
-								display: flex;
+								display: inline-flex;
 								color: #00a862;
 							}
 						}
@@ -864,7 +862,7 @@ body {
 							}
 						}
 						.error-placeholder {
-							border: 2px solid red;
+							border: 1px solid red;
 							box-shadow: none;
 						}
 
@@ -928,6 +926,62 @@ body {
 							font-weight: bold;
 							border: 1px solid black;
 							border-radius: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.earning-stars {
+		.container {
+			padding: 32px 0;
+			background-color: #f9f9f9;
+			.center-box {
+				padding: 0 1.6em;
+
+				.mini-text {
+					font-size: 1.3rem;
+					padding-bottom: 32px;
+				}
+				.box {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					.boxes {
+						padding-bottom: 32px;
+						.title {
+							padding-bottom: 16px;
+							font-size: 1.5rem;
+							letter-spacing: 1px;
+							text-transform: uppercase;
+							color: rgba(0, 0, 0, 0.58);
+							font-weight: 700;
+						}
+
+						.text {
+							padding-bottom: 16px;
+							font-size: 1.3rem;
+						}
+
+						.link {
+							display: inline-flex;
+							align-items: center;
+							font-size: 1.3rem;
+							color: #00a862;
+							font-weight: 600;
+						}
+
+						.solo-text {
+							padding-bottom: 0;
+						}
+
+						.mini-box {
+							padding-bottom: 16px;
+							.text {
+								display: inline-flex;
+								align-items: center;
+								padding-bottom: 0;
+							}
 						}
 					}
 				}
