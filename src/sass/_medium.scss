@@ -32,7 +32,7 @@
 		}
 
 		.instruction {
-			padding-bottom: 128px;
+			// padding-bottom: 128px;
 			.container {
 				.center-box {
 					padding: 0 4em;
@@ -218,6 +218,31 @@
 									.info-text {
 										font-size: 1.6rem;
 									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.form-section {
+			.container {
+				.center-box {
+					padding: 0 2.4em;
+					.form-box {
+						margin: 0 auto;
+						// max-width: 360px;
+						.title-box {
+							.title {
+								font-size: 2.8rem;
+							}
+						}
+
+						.input-container {
+							.input-box {
+								.pseudo-placeholder {
+									font-size: 1.9rem;
 								}
 							}
 						}

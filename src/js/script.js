@@ -40,39 +40,38 @@ const pseudoPlaceholder = document.querySelector('.pseudo-placeholder');
 const errorBox = document.querySelector('.error-box');
 const form = document.querySelector('.form-box');
 const errorX = document.querySelector('.error-x');
+const containerInput = document.querySelector('.input-container');
 
-// const activePlaceholder = (e) => {
-// 	if (e.target == inputBox || e.target == input) {
-// 		pseudoPlaceholder.classList.add('active-placeholder');
-// 		inputBox.classList.add('input-box-active');
-// 	} else if (e.target !== inputBox || e.target !== input) {
-// 		pseudoPlaceholder.classList.remove('active-placeholder');
-// 		inputBox.classList.remove('input-box-active');
-// 		removeClass();
-// 	}
-// };
+const pulse = (e) => {
+	const top = e.target.clientY;
+	const left = e.clientX;
 
-// const removeClass = () => {
-// 	if () {
-// 		pseudoPlaceholder.classList.add('close-placeholder');
-// 		setTimeout(() => {
-// 			pseudoPlaceholder.classList.remove('close-placeholder');
-// 		}, 250);
-// 	}
-// };
+	const topPosition = e.target.offsetTop;
+	const leftPosition = e.target.offsetLeft;
 
-// const closePlaceholder = (e) => {
-// 	if (e.target !== inputBox || e.target !== input) {
-// 		pseudoPlaceholder.classList.remove('active-placeholder');
-// 		inputBox.classList.remove('input-box-active');
-// 	}
-// };
+	const insideTopPosition = topPosition - top;
+	const insideLeftPosition = left - leftPosition;
+	
 
-// e.target !== inputBox || e.target !== input
+	const circle = document.createElement('span');
+	circle.classList.add('circle');
+	circle.style.top = insideTopPosition + 'px';
+	circle.style.left = insideLeftPosition + 'px';
+
+	e.target.append(circle);
+
+	setTimeout(() => {
+		circle.remove();
+	}, 300);
+};
 
 const activePlaceholder = (e) => {
-	if (e.target == inputBox || e.target == input) {
+	if (e.target !== inputBox || e.target !== input) {
+		removeAll();
+	}
+	if (e.target === inputBox || e.target === input) {
 		pseudoPlaceholder.classList.add('active-placeholder');
+		pseudoPlaceholder.classList.add('change-color');
 		inputBox.classList.add('input-box-active');
 	} else if (input.value !== '') {
 		removeError();
@@ -92,7 +91,11 @@ const activePlaceholder = (e) => {
 			}, 250);
 		}
 	}
-	// console.log(errorBox.classList.contains('show-error'));
+};
+
+const removeAll = () => {
+	inputBox.classList.remove('input-box-active');
+	pseudoPlaceholder.classList.remove('change-color');
 };
 
 const removeError = () => {
@@ -109,25 +112,6 @@ const removeError = () => {
 		errorBox.classList.add('hide-error');
 	}
 };
-
-// const removeError = () => {
-// 	if (input.value !== '') {
-// 		errorBox.classList.remove('show-error');
-// 		inputBox.classList.remove('error-placeholder');
-// 		pseudoPlaceholder.classList.remove('error-pseudo-placeholder');
-// 		errorX.classList.remove('active-x');
-// 		errorBox.classList.add('hide-error');
-// 		setInterval(() => {
-// 			errorBox.classList.remove('hide-error');
-// 		}, 250);
-// 		return;
-// 	} else {
-// 		errorBox.classList.add('show-error');
-// 		inputBox.classList.add('error-placeholder');
-// 		pseudoPlaceholder.classList.add('error-pseudo-placeholder');
-// 		errorX.classList.add('active-x');
-// 	}
-// };
 
 const activeMarker = (e) => {
 	marker.style.left = e.offsetLeft + 'px';
@@ -206,8 +190,9 @@ item.forEach((link) => {
 	});
 });
 
+containerInput.addEventListener('click', pulse);
 input.addEventListener('keyup', removeError);
-window.addEventListener('click', activePlaceholder);
+document.addEventListener('click', activePlaceholder);
 fivethBtn.addEventListener('click', activeBorder5);
 fourthBtn.addEventListener('click', activeBorder4);
 thirdBtn.addEventListener('click', activeBorder3);

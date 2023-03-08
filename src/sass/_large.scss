@@ -71,8 +71,34 @@
 				}
 			}
 		}
-		// 16.66667%
-		// 41.66667%
+		.form-section {
+			.container {
+				.center-box {
+					margin: 0 auto;
+					padding: 0 2.4em;
+					max-width: 1440px;
+					.form-box {
+						width: 50%;
+						.title-box {
+							.title {
+								font-size: 2.8rem;
+							}
+							.text {
+								font-size: 1.6rem;
+							}
+						}
+
+						.input-container {
+							.input-box {
+								.pseudo-placeholder {
+									font-size: 1.9rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
