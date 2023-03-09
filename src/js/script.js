@@ -42,15 +42,41 @@ const form = document.querySelector('.form-box');
 const errorX = document.querySelector('.error-x');
 const containerInput = document.querySelector('.input-container');
 
-const heads = document.querySelectorAll('.head');
-const dropdowns = document.querySelectorAll('.dropdown');
+const svg5 = document.querySelector('.svg-five');
+const svg4 = document.querySelector('.svg-four');
+const svg3 = document.querySelector('.svg-three');
+const svg2 = document.querySelector('.svg-two');
+const svg1 = document.querySelector('.svg-one');
+const head5 = document.querySelector('.five');
+const head4 = document.querySelector('.four');
+const head3 = document.querySelector('.three');
+const head2 = document.querySelector('.two');
+const head1 = document.querySelector('.one');
+const dropdown5 = document.querySelector('.order');
+const dropdown4 = document.querySelector('.business');
+const dropdown3 = document.querySelector('.social-impact');
+const dropdown2 = document.querySelector('.careers');
+const dropdown1 = document.querySelector('.about-us');
 
-const activeFooterDropdown = (e) => {
-	if (e.target === heads) {
-		dropdowns.classList.toggle('dropdown-active');
-	} else {
-		return;
-	}
+const activeFooterDropdown5 = () => {
+	dropdown5.classList.toggle('dropdown-active-fiveth');
+	svg5.classList.toggle('rotation');
+};
+const activeFooterDropdown4 = () => {
+	dropdown4.classList.toggle('dropdown-active-fourth');
+	svg4.classList.toggle('rotation');
+};
+const activeFooterDropdown3 = () => {
+	dropdown3.classList.toggle('dropdown-active-third');
+	svg3.classList.toggle('rotation');
+};
+const activeFooterDropdown2 = () => {
+	dropdown2.classList.toggle('dropdown-active');
+	svg2.classList.toggle('rotation');
+};
+const activeFooterDropdown1 = () => {
+	dropdown1.classList.toggle('dropdown-active');
+	svg1.classList.toggle('rotation');
 };
 
 const pulse = (e) => {
@@ -200,13 +226,11 @@ item.forEach((link) => {
 	});
 });
 
-heads.forEach((head) =>
-	head.addEventListener('click', () => {
-		dropdowns.forEach((el) => {
-			el.classList.toggle('dropdown-active');
-		});
-	})
-);
+head5.addEventListener('click', activeFooterDropdown5);
+head4.addEventListener('click', activeFooterDropdown4);
+head3.addEventListener('click', activeFooterDropdown3);
+head2.addEventListener('click', activeFooterDropdown2);
+head1.addEventListener('click', activeFooterDropdown1);
 containerInput.addEventListener('click', pulse);
 input.addEventListener('keyup', removeError);
 document.addEventListener('click', activePlaceholder);

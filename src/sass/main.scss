@@ -910,7 +910,7 @@ body {
 							transform: translate(-50%, -50%) scale(0);
 							background-color: #d4e9e2;
 							animation: zoom 0.3s;
-							z-index: -1;
+							z-index: -5;
 						}
 					}
 					.btn-box {
@@ -1009,6 +1009,13 @@ body {
 						width: 100%;
 						font-size: 1.6rem;
 						color: #000000de;
+
+						span {
+							transition: transform 0.3s;
+						}
+						.rotation {
+							transform: rotate(180deg);
+						}
 					}
 
 					.dropdown {
@@ -1016,6 +1023,8 @@ body {
 						display: flex;
 						flex-direction: column;
 						height: 0px;
+						background-color: #fff;
+
 						overflow: hidden;
 						transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
@@ -1029,8 +1038,20 @@ body {
 						}
 					}
 					.dropdown-active {
-						height: 100%;
-						overflow: visible;
+						height: 270px;
+						// overflow: visible;
+					}
+					.dropdown-active-third {
+						height: 135px;
+						// overflow: visible;
+					}
+					.dropdown-active-fourth {
+						height: 180px;
+						// overflow: visible;
+					}
+					.dropdown-active-fiveth {
+						height: 225px;
+						// overflow: visible;
 					}
 				}
 			}
