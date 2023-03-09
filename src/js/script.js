@@ -42,6 +42,17 @@ const form = document.querySelector('.form-box');
 const errorX = document.querySelector('.error-x');
 const containerInput = document.querySelector('.input-container');
 
+const heads = document.querySelectorAll('.head');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+const activeFooterDropdown = (e) => {
+	if (e.target === heads) {
+		dropdowns.classList.toggle('dropdown-active');
+	} else {
+		return;
+	}
+};
+
 const pulse = (e) => {
 	const top = e.target.clientY;
 	const left = e.clientX;
@@ -51,7 +62,6 @@ const pulse = (e) => {
 
 	const insideTopPosition = topPosition - top;
 	const insideLeftPosition = left - leftPosition;
-	
 
 	const circle = document.createElement('span');
 	circle.classList.add('circle');
@@ -190,6 +200,13 @@ item.forEach((link) => {
 	});
 });
 
+heads.forEach((head) =>
+	head.addEventListener('click', () => {
+		dropdowns.forEach((el) => {
+			el.classList.toggle('dropdown-active');
+		});
+	})
+);
 containerInput.addEventListener('click', pulse);
 input.addEventListener('keyup', removeError);
 document.addEventListener('click', activePlaceholder);

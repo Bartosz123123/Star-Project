@@ -934,6 +934,7 @@ body {
 	}
 
 	.earning-stars {
+		margin-bottom: 48px;
 		.container {
 			padding: 32px 0;
 			background-color: #f9f9f9;
@@ -945,8 +946,6 @@ body {
 					padding-bottom: 32px;
 				}
 				.box {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
 					.boxes {
 						padding-bottom: 32px;
 						.title {
@@ -983,6 +982,55 @@ body {
 								padding-bottom: 0;
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//FOOTER
+
+.footer {
+	padding: 32px 0 146px;
+	box-shadow: 0 -1px 3px rgb(0 0 0 / 10%), 0 -2px 2px rgb(0 0 0 / 6%),
+		0 0 2px rgb(0 0 0 / 7%);
+	.container {
+		.center-box {
+			padding: 0 16px;
+			.box-mobile {
+				.boxes {
+					.head {
+						display: inline-flex;
+						align-items: center;
+						justify-content: space-between;
+						margin: 0 0 8px;
+						padding: 8px 0;
+						width: 100%;
+						font-size: 1.6rem;
+						color: #000000de;
+					}
+
+					.dropdown {
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						height: 0px;
+						overflow: hidden;
+						transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+						.dropdown-link {
+							margin: 0 0 8px;
+							padding: 8px 0;
+							font-size: 1.4rem;
+							color: #00000094;
+							text-decoration: none;
+							font-weight: 600;
+						}
+					}
+					.dropdown-active {
+						height: 100%;
+						overflow: visible;
 					}
 				}
 			}
