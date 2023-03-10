@@ -1055,6 +1055,96 @@ body {
 					}
 				}
 			}
+
+			.box-desktop {
+				display: none;
+				.box {
+					display: flex;
+					max-width: 1440px;
+					margin: 0 auto;
+					.boxes {
+						margin-left: 32px;
+						width: 100%;
+						max-width: 190px;
+						.title {
+							margin: 0 0 24px;
+							font-size: 1.9rem;
+							color: #000000de;
+						}
+						ul {
+							list-style: none;
+							.item {
+								.link {
+									display: inline-block;
+									margin: 0 0 8px;
+									padding: 8px 0;
+									font-size: 1.6rem;
+									color: #00000094;
+									font-weight: 600;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+
+				.boxes:first-of-type {
+					margin-left: 0;
+				}
+			}
+
+			.line {
+				margin: 32px auto;
+				height: 2px;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			.social-box {
+				display: flex;
+				margin-left: -5px;
+				.social-links {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-width: 44px;
+					min-height: 44px;
+
+					svg {
+						color: black;
+					}
+				}
+			}
+
+			.links {
+				margin-top: 16px;
+				ul {
+					li {
+						display: flex;
+						align-items: center;
+						list-style: none;
+
+						.left-line {
+							margin: 0 8px;
+							// height: 100%;
+						}
+						.link {
+							display: block;
+							margin: 0 0 4px;
+							padding: 8px 0;
+							font-size: 1.4rem;
+							color: #000000de;
+							font-weight: bold;
+							text-decoration: none;
+						}
+
+						.btn {
+							border: none;
+							background: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }

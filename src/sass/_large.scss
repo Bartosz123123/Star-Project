@@ -71,6 +71,7 @@
 				}
 			}
 		}
+
 		.form-section {
 			.container {
 				.center-box {
@@ -93,6 +94,48 @@
 								.pseudo-placeholder {
 									font-size: 1.9rem;
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.earning-stars {
+			.container {
+				padding: 40px;
+				.center-box {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.footer {
+		.container {
+			.center-box {
+				padding: 0 40px;
+				.box-mobile {
+					display: none;
+				}
+
+				.box-desktop {
+					display: block;
+				}
+
+				.links {
+					ul {
+						
+
+						li {
+							
+
+							.left-line {
+							
+							}
+
+							.link {
+								
 							}
 						}
 					}
@@ -143,6 +186,15 @@
 			.desktop-box {
 				margin: auto;
 				max-width: 1440px;
+				.center-box {
+					padding: 0;
+				}
+			}
+		}
+
+		.earning-stars {
+			.container {
+				padding: 0;
 				.center-box {
 					padding: 0;
 				}
