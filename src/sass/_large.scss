@@ -44,6 +44,10 @@
 			}
 		}
 
+		.instruction-desktop {
+			margin-bottom: 128px;
+		}
+
 		.cash-section {
 			.container {
 				.center-box {
@@ -112,6 +116,7 @@
 	}
 
 	.footer {
+		padding: 48px 0 146px;
 		.container {
 			.center-box {
 				padding: 0 40px;
@@ -123,22 +128,47 @@
 					display: block;
 				}
 
+				.social-box {
+					margin: 0 auto;
+				}
+
 				.links {
+					margin: 0 auto;
 					ul {
-						
+						display: flex;
+						align-items: center;
+						text-align: center;
+						.left-line {
+							font-size: 1.6rem;
+							padding: 0 8px;
+						}
 
 						li {
-							
-
-							.left-line {
-							
+							max-width: max-content;
+							.link {
+								margin: 0;
+								// padding: 0;
+								padding: 0 16px;
+								font-size: 1.6rem;
 							}
 
-							.link {
-								
+							.btn {
+								text-align: center;
+							}
+
+							.first {
+								padding: 0 16px 0 0;
 							}
 						}
 					}
+				}
+
+				.desktop-links {
+					display: block;
+				}
+
+				.mobile-links {
+					display: none;
 				}
 			}
 		}

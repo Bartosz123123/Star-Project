@@ -58,6 +58,31 @@ const dropdown3 = document.querySelector('.social-impact');
 const dropdown2 = document.querySelector('.careers');
 const dropdown1 = document.querySelector('.about-us');
 
+const footerYear = document.querySelector('.footer-year');
+
+const rewardsScroll = document.querySelector('.header');
+const sticky = rewardsScroll.offsetTop;
+const desktopMain = document.querySelector('.desktop-main');
+const mobileMain = document.querySelector('.main-container');
+
+window.onscroll = function () {
+	if (window.pageYOffset > sticky) {
+		rewardsScroll.classList.add('sticky');
+		desktopMain.classList.add('sticky-main');
+		mobileMain.classList.add('sticky-main');
+	} else {
+		rewardsScroll.classList.remove('sticky');
+		desktopMain.classList.remove('sticky-main');
+		mobileMain.classList.remove('sticky-main');
+	}
+};
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+
+	footerYear.innerText = year;
+};
+
 const activeFooterDropdown5 = () => {
 	dropdown5.classList.toggle('dropdown-active-fiveth');
 	svg5.classList.toggle('rotation');
@@ -245,3 +270,4 @@ backMenuBtn.addEventListener('click', backToFristMenu);
 window.addEventListener('click', (e) =>
 	e.target === shadow ? closeMenu() : false
 );
+handleCurrentYear();
